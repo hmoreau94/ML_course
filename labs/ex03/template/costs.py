@@ -3,7 +3,7 @@
 
 import numpy as np
 
-def compute_cost(y, tx, w):
+def compute_cost_mae(y, tx, w):
     """calculate the cost.
     you can calculate the cost by mae.
     """
@@ -11,7 +11,7 @@ def compute_cost(y, tx, w):
     toReturn = (np.sum(e) / y.shape[0])
     return toReturn
 
-def compute_cost1(y, tx, w):
+def compute_cost_mse(y, tx, w):
     """calculate the cost.
     you can calculate the cost by mse.
     """

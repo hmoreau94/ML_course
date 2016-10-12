@@ -5,7 +5,7 @@ Grid Search
 """
 
 import numpy as np
-import costs
+from costs import *
 
 
 def generate_w(num_intervals):
@@ -26,5 +26,5 @@ def grid_search(y, tx, w0, w1):
     loss = np.zeros((len(w0), len(w1)))
     for i in range(0, len(w0)) :
         for j in range(0, len(w1)) :
-            loss[i, j] = compute_cost(y, tx, np.array([w0[i], w1[j]]))
+            loss[i, j] = compute_cost_mse(y, tx, np.array([w0[i], w1[j]]))
     return loss
